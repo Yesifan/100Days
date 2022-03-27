@@ -10,39 +10,49 @@ import SwiftUI
 struct UnitConver: View {
     let units = [UnitLength.meters,UnitLength.megameters, UnitLength.feet, UnitLength.fathoms]
 
-    @State private var val: Double = 1
+    @State private var val: Double?
     @State private var preUnit = UnitLength.meters
     @State private var afterUnit = UnitLength.megameters
     
-    var afterVal:Double {
-        Measurement(value: val, unit: preUnit).converted(to: afterUnit).value
+    var afterVal:Double? {
+        guard let val = val else {
+            return nil
+        }
+        return Measurement(value: val, unit: preUnit).converted(to: afterUnit).value
     }
 
     var body: some View {
         Form {
             Section {
                 HStack {
-                    TextField("Enter your name", value: $val, format: .number)
+                    TextField("Enter the value", value: $val, format: .number)
                         .keyboardType(.decimalPad)
                     Picker("unit", selection: $preUnit) {
                         ForEach(units, id: \.symbol) {
                             Text($0.symbol).tag($0)
                         }
                     }
-                    .frame(width: 100)
+                    .frame(width: 20)
+                    .pickerStyle(.menu)
                 }
                 HStack {
-                    Text(afterVal, format: .number)
+                    if let afterVal = afterVal {
+                        Text(afterVal, format: .number)
+                    }else{
+                        Text("Please enter a value first")
+                            .foregroundColor(.gray)
+                    }
                     Spacer()
                     Picker("unit", selection: $afterUnit) {
                         ForEach(units, id: \.symbol) {
                             Text($0.symbol).tag($0)
                         }
                     }
-                    .frame(width: 100)
+                    .frame(width: 20)
+                    .pickerStyle(.menu)
                 }
             } header: {
-                Text("length unit")
+                Text("Conversion length unit")
             }
         }
     }
