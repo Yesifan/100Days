@@ -9,10 +9,10 @@ import SwiftUI
 
 struct ContentView: View {
     enum Tab {
-        case unit
+        case Unit, RockPaperScissors
     }
     
-    @State private var selection: Tab = .unit
+    @State private var selection: Tab = .Unit
     
   
     
@@ -22,7 +22,12 @@ struct ContentView: View {
                 .tabItem {
                     Label("Featured", systemImage: "star")
                 }
-                .tag(Tab.unit)
+                .tag(Tab.Unit)
+            RockPaperScissors()
+                .tabItem {
+                    Label("RockPaperScissors", systemImage: "star")
+                }
+                .tag(Tab.RockPaperScissors)
         }
     }}
 

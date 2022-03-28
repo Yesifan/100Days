@@ -9,7 +9,7 @@ import SwiftUI
 
 struct UnitConver: View {
     let units = [UnitLength.meters,UnitLength.megameters, UnitLength.feet, UnitLength.fathoms]
-
+    
     @State private var val: Double?
     @State private var preUnit = UnitLength.meters
     @State private var afterUnit = UnitLength.megameters
@@ -20,7 +20,7 @@ struct UnitConver: View {
         }
         return Measurement(value: val, unit: preUnit).converted(to: afterUnit).value
     }
-
+    
     var body: some View {
         Form {
             Section {
@@ -40,7 +40,7 @@ struct UnitConver: View {
                         Text(afterVal, format: .number)
                     }else{
                         Text("Please enter a value first")
-                            .foregroundColor(.gray)
+                            .foregroundColor(.secondary)
                     }
                     Spacer()
                     Picker("unit", selection: $afterUnit) {
