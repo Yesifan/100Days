@@ -19,6 +19,10 @@
 		185DF39A27F003D10085EDE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 185DF36F27F003D10085EDE0 /* Assets.xcassets */; };
 		185DF3AB27F0047D0085EDE0 /* UnitConver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185DF3AA27F0047D0085EDE0 /* UnitConver.swift */; };
 		185DF3AD27F054480085EDE0 /* RockPaperScissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185DF3AC27F054480085EDE0 /* RockPaperScissors.swift */; };
+		18FAE9D827F7222C006D26F6 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 18FAE9D627F7222C006D26F6 /* Model.xcdatamodeld */; };
+		18FAE9D927F7222C006D26F6 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 18FAE9D627F7222C006D26F6 /* Model.xcdatamodeld */; };
+		18FAE9DB27F72315006D26F6 /* BookStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FAE9DA27F72315006D26F6 /* BookStore.swift */; };
+		18FAE9DC27F72315006D26F6 /* BookStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FAE9DA27F72315006D26F6 /* BookStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +57,8 @@
 		185DF39327F003D10085EDE0 /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
 		185DF3AA27F0047D0085EDE0 /* UnitConver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitConver.swift; sourceTree = "<group>"; };
 		185DF3AC27F054480085EDE0 /* RockPaperScissors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RockPaperScissors.swift; sourceTree = "<group>"; };
+		18FAE9D727F7222C006D26F6 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		18FAE9DA27F72315006D26F6 /* BookStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +110,7 @@
 				185DF3AE27F1E7A60085EDE0 /* Components */,
 				185DF3A927F004260085EDE0 /* Views */,
 				185DF36D27F003CC0085EDE0 /* Days100App.swift */,
+				18FAE9D627F7222C006D26F6 /* Model.xcdatamodeld */,
 				185DF36E27F003CC0085EDE0 /* ContentView.swift */,
 				185DF36F27F003D10085EDE0 /* Assets.xcassets */,
 			);
@@ -152,6 +159,7 @@
 			children = (
 				185DF3AA27F0047D0085EDE0 /* UnitConver.swift */,
 				185DF3AC27F054480085EDE0 /* RockPaperScissors.swift */,
+				18FAE9DA27F72315006D26F6 /* BookStore.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -323,6 +331,8 @@
 			files = (
 				185DF3AB27F0047D0085EDE0 /* UnitConver.swift in Sources */,
 				185DF39727F003D10085EDE0 /* ContentView.swift in Sources */,
+				18FAE9DB27F72315006D26F6 /* BookStore.swift in Sources */,
+				18FAE9D827F7222C006D26F6 /* Model.xcdatamodeld in Sources */,
 				185DF39527F003D10085EDE0 /* Days100App.swift in Sources */,
 				185DF3AD27F054480085EDE0 /* RockPaperScissors.swift in Sources */,
 			);
@@ -334,6 +344,8 @@
 			files = (
 				185DF39827F003D10085EDE0 /* ContentView.swift in Sources */,
 				185DF39627F003D10085EDE0 /* Days100App.swift in Sources */,
+				18FAE9DC27F72315006D26F6 /* BookStore.swift in Sources */,
+				18FAE9D927F7222C006D26F6 /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -725,6 +737,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		18FAE9D627F7222C006D26F6 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				18FAE9D727F7222C006D26F6 /* Model.xcdatamodel */,
+			);
+			currentVersion = 18FAE9D727F7222C006D26F6 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 185DF36827F003CC0085EDE0 /* Project object */;
 }

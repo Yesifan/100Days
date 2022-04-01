@@ -17,19 +17,27 @@ struct ContentView: View {
   
     
     var body: some View {
-        TabView(selection: $selection) {
-            UnitConver()
-                .tabItem {
-                    Label("Featured", systemImage: "star")
+        NavigationView{
+            List{
+                NavigationLink{
+                    UnitConver()
+                }label: {
+                    Text("UnitConver")
                 }
-                .tag(Tab.Unit)
-            RockPaperScissors()
-                .tabItem {
-                    Label("RockPaperScissors", systemImage: "star")
+                NavigationLink{
+                    RockPaperScissors()
+                }label: {
+                    Text("RockPaperScissors")
                 }
-                .tag(Tab.RockPaperScissors)
+                NavigationLink{
+                    BookStore()
+                }label: {
+                    Text("BookStore")
+                }
+            }.navigationTitle("Projects")
         }
-    }}
+    }
+}
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
