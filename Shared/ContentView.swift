@@ -34,6 +34,11 @@ struct ContentView: View {
                 }label: {
                     Text("BookStore")
                 }
+                NavigationLink{
+                    UIKitIntegration()
+                }label: {
+                    Text("PhotoPicker")
+                }
             }.navigationTitle("Projects")
         }
     }

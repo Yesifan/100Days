@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		184F3BD227FC1124004241E0 /* PhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184F3BD127FC1124004241E0 /* PhotoPicker.swift */; };
+		184F3BD327FC1124004241E0 /* PhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184F3BD127FC1124004241E0 /* PhotoPicker.swift */; };
 		185DF38627F003D10085EDE0 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185DF38527F003D10085EDE0 /* Tests_iOS.swift */; };
 		185DF38827F003D10085EDE0 /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185DF38727F003D10085EDE0 /* Tests_iOSLaunchTests.swift */; };
 		185DF39227F003D10085EDE0 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185DF39127F003D10085EDE0 /* Tests_macOS.swift */; };
@@ -23,6 +25,8 @@
 		18FAE9D927F7222C006D26F6 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 18FAE9D627F7222C006D26F6 /* Model.xcdatamodeld */; };
 		18FAE9DB27F72315006D26F6 /* BookStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FAE9DA27F72315006D26F6 /* BookStore.swift */; };
 		18FAE9DC27F72315006D26F6 /* BookStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FAE9DA27F72315006D26F6 /* BookStore.swift */; };
+		18FAE9DE27F9F434006D26F6 /* UIKitIntegration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FAE9DD27F9F434006D26F6 /* UIKitIntegration.swift */; };
+		18FAE9DF27F9F434006D26F6 /* UIKitIntegration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FAE9DD27F9F434006D26F6 /* UIKitIntegration.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		184F3BD127FC1124004241E0 /* PhotoPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPicker.swift; sourceTree = "<group>"; };
 		185DF36D27F003CC0085EDE0 /* Days100App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Days100App.swift; sourceTree = "<group>"; };
 		185DF36E27F003CC0085EDE0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		185DF36F27F003D10085EDE0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -59,6 +64,7 @@
 		185DF3AC27F054480085EDE0 /* RockPaperScissors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RockPaperScissors.swift; sourceTree = "<group>"; };
 		18FAE9D727F7222C006D26F6 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		18FAE9DA27F72315006D26F6 /* BookStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookStore.swift; sourceTree = "<group>"; };
+		18FAE9DD27F9F434006D26F6 /* UIKitIntegration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitIntegration.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +166,7 @@
 				185DF3AA27F0047D0085EDE0 /* UnitConver.swift */,
 				185DF3AC27F054480085EDE0 /* RockPaperScissors.swift */,
 				18FAE9DA27F72315006D26F6 /* BookStore.swift */,
+				18FAE9DD27F9F434006D26F6 /* UIKitIntegration.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -167,6 +174,7 @@
 		185DF3AE27F1E7A60085EDE0 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				184F3BD127FC1124004241E0 /* PhotoPicker.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -333,7 +341,9 @@
 				185DF39727F003D10085EDE0 /* ContentView.swift in Sources */,
 				18FAE9DB27F72315006D26F6 /* BookStore.swift in Sources */,
 				18FAE9D827F7222C006D26F6 /* Model.xcdatamodeld in Sources */,
+				184F3BD227FC1124004241E0 /* PhotoPicker.swift in Sources */,
 				185DF39527F003D10085EDE0 /* Days100App.swift in Sources */,
+				18FAE9DE27F9F434006D26F6 /* UIKitIntegration.swift in Sources */,
 				185DF3AD27F054480085EDE0 /* RockPaperScissors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -342,7 +352,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18FAE9DF27F9F434006D26F6 /* UIKitIntegration.swift in Sources */,
 				185DF39827F003D10085EDE0 /* ContentView.swift in Sources */,
+				184F3BD327FC1124004241E0 /* PhotoPicker.swift in Sources */,
 				185DF39627F003D10085EDE0 /* Days100App.swift in Sources */,
 				18FAE9DC27F72315006D26F6 /* BookStore.swift in Sources */,
 				18FAE9D927F7222C006D26F6 /* Model.xcdatamodeld in Sources */,
