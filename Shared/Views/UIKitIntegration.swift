@@ -11,35 +11,33 @@ struct UIKitIntegration: View {
     @State var image: Image?
     @State var uiImage: UIImage?
     @State var showPicker = false
-    
+
     var body: some View {
-        VStack {
-            ZStack {
-                Rectangle()
-                    .fill(.secondary)
-                
-                Text("Tap to select a picture")
-                    .foregroundColor(.white)
-                    .font(.headline)
-                
-                image?.resizable().scaledToFit()
-            }
-            .onTapGesture {
-                showPicker = true
-            }
-            .sheet(isPresented: $showPicker){
-                PhotoPicker(image: $uiImage)
-                    .onChange(of: uiImage){ _ in
-                        showPicker = false
-                        guard let uiImage = uiImage else {
-                            image = nil
-                            return
-                        }
-                        image = Image(uiImage: uiImage)
+        ZStack {
+            Rectangle()
+                .fill(.secondary)
+
+            Text("Tap to select a picture")
+                .foregroundColor(.white)
+                .font(.headline)
+
+            image?.resizable().scaledToFit()
+        }
+        .onTapGesture {
+            showPicker = true
+        }
+        .sheet(isPresented: $showPicker) {
+            PhotoPicker(image: $uiImage)
+                .onChange(of: uiImage) { _ in
+                    showPicker = false
+                    guard let uiImage = uiImage else {
+                        image = nil
+                        return
                     }
-            }
-    
-        }.navigationTitle("PhotoPicker")
+                    image = Image(uiImage: uiImage)
+                }
+        }
+        .navigationTitle("UIKitIntegration")
     }
 }
 

@@ -8,38 +8,37 @@
 import SwiftUI
 
 struct ContentView: View {
-    enum Tab {
-        case Unit, RockPaperScissors
-    }
-    
-    @State private var selection: Tab = .Unit
-    
-  
-    
     var body: some View {
-        NavigationView{
-            List{
-                NavigationLink{
+        NavigationView {
+            List {
+                NavigationLink {
                     UnitConver()
                 }label: {
                     Text("UnitConver")
                 }
-                NavigationLink{
+                NavigationLink {
                     RockPaperScissors()
                 }label: {
                     Text("RockPaperScissors")
                 }
-                NavigationLink{
+                NavigationLink {
                     BookStore()
                 }label: {
                     Text("BookStore")
                 }
-                NavigationLink{
+                NavigationLink {
                     UIKitIntegration()
                 }label: {
                     Text("PhotoPicker")
                 }
-            }.navigationTitle("Projects")
+                NavigationLink {
+                    LayoutAndGeometry()
+                }label: {
+                    Text("LayoutAndGeometry")
+                }
+            }
+            .navigationTitle("Projects")
+            .navigationBarItems(trailing: Image(systemName: "person.crop.circle"))
         }
     }
 }
@@ -47,5 +46,7 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .preferredColorScheme(.dark)
+            .previewInterfaceOrientation(.portrait)
     }
 }

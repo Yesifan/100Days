@@ -8,19 +8,19 @@
 import SwiftUI
 
 struct UnitConver: View {
-    let units = [UnitLength.meters,UnitLength.megameters, UnitLength.feet, UnitLength.fathoms]
-    
+    let units = [UnitLength.meters, UnitLength.megameters, UnitLength.feet, UnitLength.fathoms]
+
     @State private var val: Double?
     @State private var preUnit = UnitLength.meters
     @State private var afterUnit = UnitLength.megameters
-    
-    var afterVal:Double? {
+
+    var afterVal: Double? {
         guard let val = val else {
             return nil
         }
         return Measurement(value: val, unit: preUnit).converted(to: afterUnit).value
     }
-    
+
     var body: some View {
         Form {
             Section {
@@ -38,7 +38,7 @@ struct UnitConver: View {
                 HStack {
                     if let afterVal = afterVal {
                         Text(afterVal, format: .number)
-                    }else{
+                    } else {
                         Text("Please enter a value first")
                             .foregroundColor(.secondary)
                     }
@@ -55,6 +55,7 @@ struct UnitConver: View {
                 Text("Conversion length unit")
             }
         }
+        .navigationTitle("UnitConver")
     }
 }
 
